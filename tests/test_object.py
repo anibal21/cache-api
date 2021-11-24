@@ -9,7 +9,7 @@ class ObjectResourceTestCase(TestCase):
 
     def test_get(self):
         res = self.client.get(
-            "/v1/object/",
+            "/v1/objects/123",
             headers={
                 "Content-Type": "application/json",
             },
