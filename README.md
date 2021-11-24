@@ -15,9 +15,8 @@
 - `OBJECTS_TIME_TO_LIVE=10`
 - `OBJECTS_EVICTION_POLICY = REJECT`
 
-##### Upgrade database and run your flask app
+##### Run the API
 
-- `flask db upgrade`
 - `flask run`
 
 ##### Run tests locally
