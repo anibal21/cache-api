@@ -11,12 +11,18 @@
 - `FLASK_APP=main.py`
 - `FLASK_DEBUG=1 `
 - `FLASK_ENV=development`
+- `MAIL_PORT=587`
+- `MAIL_USE_TLS = True`
+- `DEV_DATABASE_URL=''`
+- `TEST_DATABASE_URL=''
+- `
 - `OBJECTS_SLOT_NUMBER=10`
 - `OBJECTS_TIME_TO_LIVE=10`
 - `OBJECTS_EVICTION_POLICY = REJECT`
 
-##### Run the API
+##### Upgrade database and run your flask app
 
+- `flask db upgrade`
 - `flask run`
 
 ##### Run tests locally
