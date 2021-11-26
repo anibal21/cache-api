@@ -7,7 +7,7 @@ import click
 import coverage
 from dotenv import load_dotenv
 
-from api.app import create_app
+from config.app import create_app
 
 dotenv_path = os.path.join(os.path.dirname(__file__), '.env')
 if os.path.exists(dotenv_path):
@@ -23,7 +23,7 @@ def test():
 
 COV = None
 if os.environ.get('FLASK_COVERAGE'):
-    COV = coverage.coverage(branch=True, include=('resources/*','api/*'))
+    COV = coverage.coverage(branch=True, include=('routes/*','config/*'))
     COV.start()
 
 

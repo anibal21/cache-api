@@ -2,8 +2,13 @@ import logging
 import os
 from logging.handlers import RotatingFileHandler
 
-basedir = os.path.abspath(os.path.dirname(__file__))
+"""
+@Description: Deployment Config by environment
+@Author: arodriguez
+@Date: 2021-11-26
+"""
 
+basedir = os.path.abspath(os.path.dirname(__file__))
 
 class Config:
 
@@ -20,24 +25,19 @@ class TestingConfig(Config):
     TESTING = True
 
 
-class StagingConfig(Config):
-    pass
-
-
 class ProductionConfig(Config):
     DEBUG = False
 
     @classmethod
     def init_app(cls, app):
         Config.init_app(app)
-        subject = "Your Application Failed"
 
         # log to a file
         if not os.path.exists("logs"):
             os.mkdir("logs")
         # limit the log file size to 102MB
         file_handler = RotatingFileHandler(
-            "logs/diary_app.log", maxBytes=102400, backupCount=10
+            "logs/cache_api.log", maxBytes=102400, backupCount=10
         )
         file_handler.setFormatter(
             logging.Formatter(
@@ -54,6 +54,5 @@ class ProductionConfig(Config):
 env_config = {
     "development": DevelopmentConfig,
     "testing": TestingConfig,
-    "production": ProductionConfig,
-    "staging": StagingConfig,
+    "production": ProductionConfig
 }
