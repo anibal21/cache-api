@@ -38,8 +38,8 @@
 
 `flask test --coverage`
 
-##### Artifact from
-
-`https://github.com/oluchilinda/diary-api`
-
-Home
+##### Notes from Author:
+- Project Developed by Anibal Rodriguez for CBInsights.
+- Python 3.7 is recommended.
+- It is design for Heroku first
+- It was used GitFlow for this Project
