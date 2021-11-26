@@ -1,7 +1,7 @@
 import logging
 import os
 
-from api.config import env_config
+from config.envConfig import env_config
 
 FLASK_ENV = os.getenv("FLASK_ENV")
 
