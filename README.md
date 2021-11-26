@@ -9,19 +9,21 @@
 ##### Add environment variables, create a new .env in your root folder directory , add the following
 
 - `FLASK_APP=main.py`
-- `FLASK_DEBUG=1 `
+- `FLASK_DEBUG=1`
 - `FLASK_ENV=development`
-- `MAIL_PORT=587`
-- `MAIL_USE_TLS = True`
-- `DEV_DATABASE_URL=''`
-- `TEST_DATABASE_URL=''`
-- `SECRET_KEY=''`
-- `MAIL_SERVER = ''`
-- `MAIL_USERNAME = ''`
-- `MAIL_PASSWORD = ''`
-- `SENDGRID_API_KEY = ''`
-- `SECURITY_PASSWORD_SALT=''`
-- `MAIL_DEFAULT_SENDER=''`
+- `OBJECTS_SLOT_NUMBER=2`
+- `OBJECTS_TIME_TO_LIVE=10`
+- `OBJECTS_EVICTION_POLICY=OLDEST_FIRST`
+
+###### Properties:
+
+| PropertyName | value |
+| --- | --- |
+| FLASK_DEBUG |  1-Enabled, 0-Disabled|
+| FLASK_ENV |  development, production|
+| OBJECTS_SLOT_NUMBER |  0 to N|
+| OBJECTS_TIME_TO_LIVE |  0 to N |
+| OBJECTS_EVICTION_POLICY | OLDEST_FIRST, NEWEST_FIRST, REJECT|
 
 ##### Upgrade database and run your flask app
 
@@ -40,6 +42,4 @@
 
 `https://github.com/oluchilinda/diary-api`
 
-Code Challenge Enterprise: CBInsights
-
-Implementation author: Anibal Rodriguez
+Home
